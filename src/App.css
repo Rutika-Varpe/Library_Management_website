@@ -1,0 +1,57 @@
+/* Ensure body and html take full width and height */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Home background */
+.home-bg {
+  position: relative;
+ background-image: url("https://images.unsplash.com/photo-1516979187457-637abb4f9353");
+
+
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;   /* move content to top */
+  align-items: flex-start;       /* align content to left */
+  padding: 100px 50px;           /* spacing from top and sides */
+  color: #FFD966;                /* default heading/paragraph color */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+/* Optional overlay for better readability */
+.home-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* semi-transparent overlay */
+  z-index: 1;
+}
+
+.home-bg h1,
+.home-bg p {
+  position: relative;  /* above overlay */
+  z-index: 2;
+  text-align: left;    /* left-align text */
+}
+
+.home-bg h1 {
+  font-size: 3rem;        
+  margin-bottom: 20px;
+  color: #FFD966;        /* soft yellow heading */
+}
+
+.home-bg p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  color: #FFF8DC;        /* light cream paragraph */
+}

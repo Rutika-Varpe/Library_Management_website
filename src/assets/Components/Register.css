@@ -1,0 +1,166 @@
+
+.register-page {
+  background: linear-gradient(135deg, #a9a9a9, #707070);
+ 
+  min-height: 90vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+.register-container {
+  display: flex;
+  max-width: 850px; 
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15); 
+  backdrop-filter: blur(15px); 
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-container:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+
+.register-left {
+  flex: 1;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 50px 30px;
+  position: relative;
+}
+
+.register-left::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/cubes.png");
+  opacity: 0.05;
+  pointer-events: none;
+  border-radius: 25px 0 0 25px;
+}
+
+
+.register-right {
+  flex: 1;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+
+.register-right h1 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+}
+
+
+.register-right input {
+  width: 100%;
+  padding: 14px 18px;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.register-right input::placeholder {
+  color: #e0e0e0;
+}
+
+.register-right input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 8px rgba(75, 108, 183, 0.5);
+}
+
+/* Submit Button */
+.register-right button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-right button:hover {
+  background: linear-gradient(135deg, #182848, #4b6cb7);
+  transform: scale(1.05);
+}
+
+
+.register-right p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+.register-right p a {
+  color: #ffd966;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-right p a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 900px) {
+  .register-container {
+    flex-direction: column;
+    border-radius: 25px;
+  }
+  .register-left {
+    border-radius: 25px 25px 0 0;
+    padding: 40px 20px;
+    font-size: 1.8rem;
+  }
+  .register-right {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .register-right input {
+    padding: 12px 14px;
+  }
+  .register-right button {
+    padding: 12px;
+    font-size: 16px;
+  }
+  .register-left {
+    font-size: 1.5rem;
+    padding: 30px 15px;
+  }
+}

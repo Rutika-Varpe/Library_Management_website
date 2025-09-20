@@ -1,0 +1,99 @@
+.about-page {
+  background: linear-gradient(135deg, #a9a9a9, #707070); 
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+.about-container {
+  max-width: 900px;
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.8;
+  animation: fadeInUp 0.8s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.about-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+
+.about-container h1 {
+  background: linear-gradient(90deg, #ffd966, #06d6a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+}
+
+
+.about-container h2 {
+  color: #ffd966; 
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-left: 4px solid #ffd966;
+  padding-left: 10px;
+}
+
+
+.about-container p {
+  font-size: 1.1rem;
+  color: #f0f0f0; 
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+
+.about-container ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.about-container ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  padding-left: 28px;
+  position: relative;
+  color: #e0e0e0; 
+}
+
+.about-container ul li::before {
+  content: "📖";
+  position: absolute;
+  left: 0;
+  color: #ffd966; 
+  font-size: 1.2rem;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
